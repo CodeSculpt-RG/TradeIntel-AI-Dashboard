@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 import time
+BACKEND_URL = "https://your-appscrip-project.vercel.app"
 
 st.set_page_config(page_title="Appscrip Trade Intel", layout="wide")
 
@@ -53,7 +54,7 @@ with tab1:
         with st.spinner("Fetching 2025 Market Data..."):
             try:
                 res = requests.get(
-                    f"http://localhost:8001/analyze/{sector.lower()}",
+                    f"{BACKEND_URL}/analyze/{sector.lower()}",
                     headers={"X-API-KEY": key},
                     params={"model": model_choice},
                     timeout=90
