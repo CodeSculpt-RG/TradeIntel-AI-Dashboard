@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 import time
-BACKEND_URL = "https://your-appscrip-project.vercel.app"
+BACKEND_URL = "https://your-appscrip-project.vercel.app/docs"
 
 st.set_page_config(page_title="Appscrip Trade Intel", layout="wide")
 
